@@ -1,4 +1,4 @@
-@import 
+@import
   'sass/_susy.scss',
   'sections/reset.scss',
   'sections/mail';
@@ -12,14 +12,21 @@ $susy: (
 $container: 1170px;
 $container-float: 100%;
 
-.container-float{
+.container-float {
   @include container($container-float);
 }
 
-.container{
+.container {
   @include container($container);
-}  
-
-.test{
-  @include span(6);	
 }
+
+@import
+  'sections/menu',
+  'sections/main',
+  'sections/about',
+  'sections/interior',
+  'sections/menu_rest',
+  'sections/stocks',
+  'sections/review',
+  'sections/map',
+  'sections/footer';

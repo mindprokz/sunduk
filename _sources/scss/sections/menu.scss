@@ -1,0 +1,117 @@
+#menu {
+  background: #f7f3ef;
+  height: 90px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 2;
+
+  .container {
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  nav {
+    display: none;
+
+    @media (min-width: 750px) {
+      width: 250px;
+      display: block;
+
+      a {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 970px) {
+      width: 310px;
+
+      a {
+        font-size: 18px;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      width: 430px;
+    }
+
+    a {
+      font-family: 'Philosopher', sans-serif;
+      display: inline-block;
+      width: 33.3333%;
+      text-align: center;
+      text-transform: uppercase;
+      cursor: pointer;
+      text-decoration: none;
+      color: #1d1d1d;
+    }
+  }
+
+  nav.left {
+    position: absolute;
+    top: 55px;
+  }
+
+  nav.right {
+    position: absolute;
+    top: 55px;
+    right: 0;
+  }
+
+  .lang {
+    position: absolute;
+    top: 37px;
+    font-family: 'Philosopher', sans-serif;
+    right: 65px;
+    display: none;
+
+    @media (min-width: 750px) {
+      right: 120px;
+      top: 18px;
+      display: block;
+    }
+
+    @media (min-width: 970px) {
+      right: 200px;
+    }
+
+    @media (min-width: 1170px) {
+      right: 295px;
+    }
+
+    a {
+      padding-left: 10px;
+      padding-right: 10px;
+      text-decoration: none;
+      color: #1d1d1d;
+    }
+  }
+
+  .social {
+    position: absolute;
+    top: 33px;
+    left: 40px;
+
+    @media (min-width: 750px) {
+      top: 14px;
+      left: 25px;
+    }
+
+    @media (min-width: 970px) {
+      left: unset;
+      right: 15px;
+    }
+
+    a {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+}

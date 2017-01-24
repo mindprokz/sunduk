@@ -1,0 +1,12 @@
+#map {
+  height: 450px;
+  overflow: hidden;
+
+  @media (min-width: 750px) {
+    height: 520px;
+  }
+
+  @media (min-width: 970px) {
+    height: 700px;
+  }
+}

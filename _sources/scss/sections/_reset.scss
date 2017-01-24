@@ -17,7 +17,7 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
   -webkit-margin-before: 0em;
-  -webkit-margin-after: 0em;  
+  -webkit-margin-after: 0em;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -26,6 +26,7 @@ footer, header, nav, section {
 }
 body {
   line-height: 1;
+  padding-top: 90px;
 }
 ol, ul {
   list-style: none;

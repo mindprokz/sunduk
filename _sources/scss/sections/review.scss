@@ -1,0 +1,83 @@
+#review {
+  background: #fff;
+  padding-top: 50px;
+  padding-bottom: 46px;
+  text-align: center;
+
+  h2 {
+    color: #4a3030;
+    font-size: 28px;
+    font-weight: 700;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  h3 {
+    color: #4a3030;
+    font-size: 20px;
+    padding-bottom: 50px;
+
+    @media (min-width: 750px) {
+      font-size: 27px;
+    }
+
+    span {
+      font-weight: 700;
+    }
+
+    a {
+      color: #5c2800;
+      font-family: 'Philosopher', sans-serif;
+      font-style: italic;
+    }
+  }
+
+  ul {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+
+    li {
+      text-align: center;
+      padding-bottom: 35px;
+      box-sizing: border-box;
+
+      @media (min-width: 750px) {
+        width: 50%;
+        text-align: left;
+        float: left;
+        height: 195px;
+      }
+
+      @media (min-width: 865px) {
+        height: 140px;
+      }
+
+      h4 {
+        color: #5c2800;
+        font-size: 20px;
+        margin-bottom: 10px;
+        font-weight: 700;
+
+        span {
+          border-bottom: 2px solid;
+        }
+      }
+
+      p {
+        font-family: 'Philosopher', sans-serif;
+        font-size: 17px;
+        line-height: 25px;
+        font-style: italic;
+        padding-right: 25px;
+      }
+    }
+  }
+
+  .trapvisor {
+    a {
+      margin-right: 15px;
+      margin-left: 15px;
+    }
+  }
+}
