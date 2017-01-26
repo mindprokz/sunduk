@@ -81,3 +81,15 @@
     }
   }
 }
+
+.all_rest {
+  position: fixed;
+  top: 50vh;
+  right: 0;
+  transform: translateY(-50%);
+  display: none;
+
+  @media (min-width: 750px) {
+    display: block;
+  }
+}

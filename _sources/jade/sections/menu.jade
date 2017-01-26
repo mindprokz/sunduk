@@ -1,5 +1,14 @@
 section#menu
   .container
+    nav.mobile_menu
+      .wrap
+        a(href="#").anchor О нас
+        a(href="#").anchor Интерьер
+        a(href="#").anchor Меню
+        a(href="#").anchor Акции
+        a(href="#").anchor Отзывы
+        a(href="#").anchor Контакты
+        a(href="#") Все рестораны
     .social
       a(href="#"): img(src="images/inst.png").insta
       a(href="#"): img(src="images/facebook.png").facebook
@@ -9,15 +18,16 @@ section#menu
       a(href="#") EN
       a(href="#") KZ
     nav.left
-      a(href="http://test.com") О нас
-      a(href="#") Интерьер
-      a(href="#") Меню
+      a(href="#").anchor О нас
+      a(href="#").anchor Интерьер
+      a(href="#").anchor Меню
     nav.right
-      a(href="#") Акции
-      a(href="#") Отзывы
-      a(href="#") Контакты
+      a(href="#").anchor Акции
+      a(href="#").anchor Отзывы
+      a(href="#").anchor Контакты
     picture.logo
       source(srcset="images/logo_desktop.jpg" media="(min-width: 970px)")
       source(srcset="images/logo_tablet.jpg" media="(min-width: 750px)")
       source(srcset="images/logo_mobile.jpg" media="(min-width: 1px)")
       img(src="images/logo_desktop")
+    img(src="images/buter.png").burger

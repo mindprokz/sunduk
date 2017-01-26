@@ -1,0 +1,85 @@
+#fix_menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  box-shadow: 1px 1px 10px rgba(#000, 0.3);
+  z-index: 5;
+  height: 90px;
+  transform: translateY(-120%);
+  transition: transform 0.3s ease;
+
+  &.opened {
+    transform: translateY(0);
+  }
+
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+  }
+
+  nav {
+    position: absolute;
+    top: 50px;
+    left: 130px;
+
+    a {
+      font-family: 'Philosopher', sans-serif;
+      color: #1d1d1d;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding-left: 16px;
+      padding-right: 16px;
+
+      @media (min-width: 970px) {
+        padding-right: 33px;
+        padding-left: 33px;
+      }
+    }
+  }
+
+  .lang {
+    position: absolute;
+    top: 15px;
+    font-family: 'Philosopher', sans-serif;
+    right: 15px;
+
+    a {
+      padding-left: 10px;
+      padding-right: 10px;
+      text-decoration: none;
+      color: #1d1d1d;
+      display: inline;
+    }
+  }
+
+  .social {
+    position: absolute;
+    top: 12px;
+    right: 160px;
+
+    a {
+      padding-left: 9px;
+      padding-right: 8px;
+    }
+
+    @media (min-width: 1170px) {
+      top: 50px;
+      right: 15px;
+    }
+  }
+
+  @media (max-width: 750px) {
+    display: none;
+  }
+}

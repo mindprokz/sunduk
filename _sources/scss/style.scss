@@ -12,6 +12,16 @@ $susy: (
 $container: 1170px;
 $container-float: 100%;
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @media (max-width: 480px) {
+    width: 480px;
+  }
+}
+
 .container-float {
   @include container($container-float);
 }
@@ -22,6 +32,7 @@ $container-float: 100%;
 
 @import
   'sections/menu',
+  'sections/fix_menu',
   'sections/main',
   'sections/about',
   'sections/interior',
