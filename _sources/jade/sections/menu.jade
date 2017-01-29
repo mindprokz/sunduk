@@ -2,32 +2,33 @@ section#menu
   .container
     nav.mobile_menu
       .wrap
-        a(href="#").anchor О нас
-        a(href="#").anchor Интерьер
-        a(href="#").anchor Меню
-        a(href="#").anchor Акции
-        a(href="#").anchor Отзывы
-        a(href="#").anchor Контакты
-        a(href="#") Все рестораны
+        a(href="#about").anchor О нас
+        a(href="#interior").anchor Интерьер
+        a(href="#menu").anchor Меню
+        a(href="#stock").anchor Акции
+        a(href="#review").anchor Отзывы
+        a(href="#contact").anchor Контакты
+        a(href="http://satgroup.kz") Все рестораны
     .social
-      a(href="#"): img(src="images/inst.png").insta
-      a(href="#"): img(src="images/facebook.png").facebook
-      a(href="#"): img(src="images/mail.png").mail
+      a(href="https://www.instagram.com/satgrouprest/" target="_blank"): img(src="images/inst.png").insta
+      a(href="https://www.facebook.com/SAT-GROUP-Rest-1823563401189352/?hc_ref=SEARCH&fref=nf" target="_blank"): img(src="images/facebook.png").facebook
+      a(href="mailto:info.satgroup.kz"): img(src="images/mail.png").mail
     .lang
       a(href="#") RU
       a(href="#") EN
       a(href="#") KZ
     nav.left
-      a(href="#").anchor О нас
-      a(href="#").anchor Интерьер
-      a(href="#").anchor Меню
+      a(href="#about").anchor О нас
+      a(href="#interior").anchor Интерьер
+      a(href="#menu").anchor Меню
     nav.right
-      a(href="#").anchor Акции
-      a(href="#").anchor Отзывы
-      a(href="#").anchor Контакты
-    picture.logo
-      source(srcset="images/logo_desktop.jpg" media="(min-width: 970px)")
-      source(srcset="images/logo_tablet.jpg" media="(min-width: 750px)")
-      source(srcset="images/logo_mobile.jpg" media="(min-width: 1px)")
-      img(src="images/logo_desktop")
+      a(href="#stock").anchor Акции
+      a(href="#review").anchor Отзывы
+      a(href="#contact").anchor Контакты
+    a(href="#top")
+      picture.logo
+        source(srcset="images/logo_desktop.jpg" media="(min-width: 970px)")
+        source(srcset="images/logo_tablet.jpg" media="(min-width: 750px)")
+        source(srcset="images/logo_mobile.jpg" media="(min-width: 1px)")
+        img(src="images/logo_desktop")
     img(src="images/buter.png").burger

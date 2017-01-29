@@ -31,16 +31,29 @@ var myMap,
 
 function init(){
   myMap = new ymaps.Map("map", {
-    center: [55.76, 37.64],
-    zoom: 7
+    center: [51.129067, 71.406420],
+    zoom: 17
   });
 
   myMap.behaviors.disable(['drag','scrollZoom']);
 
-  myPlacemark = new ymaps.Placemark([55.76, 37.64], {
+  myPlacemark = new ymaps.Placemark([51.129067, 71.406420], {
     hintContent: 'Москва!',
     balloonContent: 'Столица России'
   });
 
   myMap.geoObjects.add(myPlacemark);
 }
+
+// fancybox
+$(".fancybox").click(function() {
+	$(".fancybox").fancybox({
+		openEffect: 'fade',
+		closeEffect: 'elastic'
+	});
+});
+
+$(document).on('click', 'a.anchor', function () {
+  $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 152 }, 1000 );
+  return false;
+});
