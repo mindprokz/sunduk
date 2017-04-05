@@ -1,5 +1,5 @@
 #menu {
-  background: #f7f3ef;
+  background: url("images/logo_back.jpg") no-repeat;
   height: 90px;
   position: absolute;
   top: 0;
@@ -27,6 +27,14 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+
+    img {
+      width: 193px;
+
+      @media (min-width: 970px) {
+        width: 100%;
+      }
+    }
   }
 
   nav:not(.mobile_menu) {
@@ -37,24 +45,27 @@
       display: block;
 
       a {
-        font-size: 14px;
+        font-size: 12px;
       }
     }
 
-    @media (min-width: 970px) {
+    @media (min-width: 992px) {
       width: 310px;
+
+      a {
+        font-size: 15px;
+      }
+    }
+
+    @media (min-width: 1170px) {
+      width: 430px;
 
       a {
         font-size: 18px;
       }
     }
 
-    @media (min-width: 1170px) {
-      width: 430px;
-    }
-
     a {
-      font-family: 'Philosopher', sans-serif;
       display: inline-block;
       width: 33.3333%;
       text-align: center;
@@ -68,19 +79,21 @@
   nav.left {
     position: absolute;
     top: 55px;
+    font-weight: 700;
   }
 
   nav.right {
     position: absolute;
     top: 55px;
     right: 0;
+    font-weight: 700;
   }
 
   .lang {
     position: absolute;
     top: 6px;
-    font-family: 'Philosopher', sans-serif;
     right: 100px;
+    font-weight: 700;
 
     a {
       padding-left: 10px;
@@ -101,12 +114,12 @@
       }
     }
 
-    @media (min-width: 970px) {
-      right: 200px;
+    @media (min-width: 992px) {
+      right: 173px;
     }
 
     @media (min-width: 1170px) {
-      right: 295px;
+      right: 279px;
     }
   }
 
@@ -116,18 +129,26 @@
     left: 40px;
 
     @media (min-width: 750px) {
+      left: unset;
       top: 14px;
-      left: 25px;
+      right: 0;
     }
 
-    @media (min-width: 970px) {
-      left: unset;
+    @media (min-width: 992px) {
       right: 15px;
     }
 
     a {
       padding-left: 5px;
       padding-right: 5px;
+    }
+
+    .mail {
+      display: none;
+
+      @media (min-width: 970px) {
+        display: inline;
+      }
     }
   }
 
@@ -176,6 +197,38 @@
 
     @media (max-width: 750px) {
       display: table;
+    }
+  }
+
+  .num {
+    display: none;
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    left: 26px;
+    border: 2px solid #f3b118;
+    border-top: none;
+    font-weight: 700;
+    font-size: 17px;
+    color: #1d1d1d;
+
+    img {
+      vertical-align: middle;
+      margin-right: 15px;
+    }
+
+    @media (min-width: 750px) {
+      display: block;
+    }
+
+    @media (min-width: 992px) {
+      left: 83px;
+    }
+
+    @media (min-width: 1170px) {
+      left: 188px;
     }
   }
 }

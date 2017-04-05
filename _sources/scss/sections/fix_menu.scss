@@ -1,9 +1,9 @@
 #fix_menu {
+  background: url("images/logo_back.jpg") no-repeat;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
   box-shadow: 1px 1px 10px rgba(#000, 0.3);
   z-index: 5;
   height: 90px;
@@ -23,7 +23,6 @@
 
   .logo {
     position: absolute;
-    top: 5px;
     left: 15px;
   }
 
@@ -31,11 +30,11 @@
     position: absolute;
     top: 50px;
     left: 130px;
+    font-weight: 700;
 
     a {
-      font-family: 'Philosopher', sans-serif;
       color: #1d1d1d;
-      font-size: 18px;
+      font-size: 15px;
       text-transform: uppercase;
       text-decoration: none;
       padding-left: 16px;
@@ -44,6 +43,7 @@
       @media (min-width: 970px) {
         padding-right: 33px;
         padding-left: 33px;
+        font-size: 16px;
       }
     }
   }
@@ -51,8 +51,8 @@
   .lang {
     position: absolute;
     top: 15px;
-    font-family: 'Philosopher', sans-serif;
     right: 15px;
+    font-weight: 700;
 
     a {
       padding-left: 10px;
@@ -76,6 +76,25 @@
     @media (min-width: 1170px) {
       top: 50px;
       right: 15px;
+    }
+  }
+
+  .num {
+    position: absolute;
+    top: 0;
+    left: 162px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 700;
+    border: 2px solid #f3b118;
+    border-top: none;
+    color: #1d1d1d;
+
+    img {
+      vertical-align: middle;
+      margin-right: 15px;
     }
   }
 

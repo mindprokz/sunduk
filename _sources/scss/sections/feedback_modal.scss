@@ -1,0 +1,85 @@
+#modal_feedback {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  overflow: hidden;
+
+  &.close_modal_feed {
+    display: none;
+  }
+
+  .wrap {
+    position: absolute;
+    width: 380px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+#modal_feedback .modal_feed {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 20px;
+
+  img {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    cursor: pointer;
+  }
+
+  h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 18px;
+  }
+
+  .line {
+    margin: auto;
+    background: #279f9e;
+    height: 2px;
+    width: 100px;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 80%;
+    display: block;
+    margin: 20px auto 0;
+    border: 1px solid #a6a6a6;
+    padding: 10px 17px;
+    font-family: 'Philosopher', sans-serif;
+
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+
+  textarea {
+    resize: none;
+    min-height: 150px;
+    font-family: 'Philosopher', sans-serif;
+  }
+
+  input[type="submit"] {
+    margin-left: 10%;
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #279f9e;
+    width: 150px;
+    height: 40px;
+    font-family: 'Philosopher', sans-serif;
+    border: none;
+  }
+}

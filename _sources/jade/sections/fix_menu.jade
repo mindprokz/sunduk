@@ -1,18 +1,45 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var about = 'О ресторане'
+    - var interior = 'Интерьер'
+    - var menu = 'Меню'
+    - var stock = 'Акции'
+    - var review = 'Отзывы'
+    - var contact = 'Контакты'
+  when 'eng'
+    - var about = 'About us'
+    - var interior = 'Interior'
+    - var menu = 'Menu'
+    - var stock = 'Specials'
+    - var review = 'Comments'
+    - var contact = 'Contacts'
+  when 'kz'
+    - var about = 'Біз туралы'
+    - var interior = 'Интерьер'
+    - var menu = 'Мәзір'
+    - var stock = 'Акциялар'
+    - var review = 'Пікірлер'
+    - var contact = 'Байланыс'
+
 section#fix_menu.opened
   .container
     a(href="#top").anchor: img(src="images/logo_fix.png").logo
     nav
-      a(href="#about").anchor О нас
-      a(href="#interior").anchor Интерьер
-      a(href="#menu").anchor Меню
-      a(href="#stock").anchor Акции
-      a(href="#review").anchor Отзывы
-      a(href="#contact").anchor Контакты
+      a(href="#about").anchor #{about}
+      a(href="#interior").anchor #{interior}
+      a(href="#menu").anchor #{menu}
+      a(href="#stock").anchor #{stock}
+      a(href="#review").anchor #{review}
+      a(href="#contact").anchor #{contact}
     .social
       a(href="https://www.instagram.com/satgrouprest/" target="_blank"): img(src="images/inst.png").insta
       a(href="https://www.facebook.com/SAT-GROUP-Rest-1823563401189352/?hc_ref=SEARCH&fref=nf" target="_blank"): img(src="images/facebook.png").facebook
-      a(href="mailto:info.satgroup.kz"): img(src="images/mail.png").mail
+      a(href="№").feed_open_fc: img(src="images/mail.png").mail
     .lang
       a(href="#") RU
       a(href="#") EN
       a(href="#") KZ
+    .num
+      img(src="images/phone_ico.png").icon
+      span +7 (701) 070707 2

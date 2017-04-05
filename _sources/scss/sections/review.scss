@@ -1,5 +1,5 @@
 #review {
-  background: #fff;
+  background: url('images/review_texture.jpg');
   padding-top: 50px;
   padding-bottom: 46px;
   text-align: center;
@@ -27,8 +27,11 @@
 
     a {
       color: #5c2800;
-      font-family: 'Philosopher', sans-serif;
       font-style: italic;
+    }
+
+    &.review_trap {
+      font-size: 20px;
     }
   }
 
@@ -46,11 +49,11 @@
         width: 50%;
         text-align: left;
         float: left;
-        height: 195px;
+        height: 220px;
       }
 
-      @media (min-width: 865px) {
-        height: 140px;
+      @media (min-width: 1170px) {
+        height: 165px;
       }
 
       h4 {
@@ -65,7 +68,6 @@
       }
 
       p {
-        font-family: 'Philosopher', sans-serif;
         font-size: 17px;
         line-height: 25px;
         font-style: italic;

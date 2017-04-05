@@ -1,3 +1,39 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var one = 'Бифу рамен'
+    - var two = 'Гютан ясай нимоно'
+    - var three = 'Данки'
+    - var four = 'Канадиан маки'
+    - var five = 'Кохицуджи но гриль'
+    - var six = 'Сифудо мисо сиру'
+    - var seven = 'Сяке терияки'
+    - var eight = 'Сяке хато рору'
+    - var nine = 'Туна сашими сарада'
+    - var ten = 'Фудзи'
+  when 'eng'
+    - var one = 'Bifu Ramen'
+    - var two = 'Gyutan yasai nimono'
+    - var three = 'Danki'
+    - var four = 'Canadian maki'
+    - var five = 'Kohitsuji no grill'
+    - var six = 'Seafood miso soup'
+    - var seven = 'Sake teriyaki'
+    - var eight = 'Sake hatororu'
+    - var nine = 'Tuna sasimisarada'
+    - var ten = 'Fuji'
+  when 'kz'
+    - var one = 'Бифу рамен'
+    - var two = 'Гютан ясай нимоно'
+    - var three = 'Данки'
+    - var four = 'Канадиан маки'
+    - var five = 'Кохицуджи но гриль'
+    - var six = 'Сифудо мисо сиру'
+    - var seven = 'Сяке терияки'
+    - var eight = 'Сяке хато рору'
+    - var nine = 'Туна сашими сарада'
+    - var ten = 'Фудзи'
+  
 section#menu_rest
   a(name="menu")
   .container
@@ -5,31 +41,28 @@ section#menu_rest
     .sl_menu
       .slide
         img(src="images/dishes/1.jpg")
-        h3 Бифу рамен
+        h3 #{one}
       .slide
         img(src="images/dishes/2.jpg")
-        h3 Гютан ясай нимоно
+        h3 #{two}
       .slide
         img(src="images/dishes/3.jpg")
-        h3 Данки
+        h3 #{three}
       .slide
         img(src="images/dishes/4.jpg")
-        h3 Канадиан маки
-      .slide
-        img(src="images/dishes/5.jpg")
-        h3 Кохицуджи но гриль
+        h3 #{four}
       .slide
         img(src="images/dishes/6.jpg")
-        h3 Сифудо мисо сиру
+        h3 #{six}
       .slide
         img(src="images/dishes/7.jpg")
-        h3 Сяке терияки
+        h3 #{seven}
       .slide
         img(src="images/dishes/8.jpg")
-        h3 Сяке хато рору
+        h3 #{eight}
       .slide
         img(src="images/dishes/9.jpg")
-        h3 Туна сашими сарада
+        h3 #{nine}
       .slide
         img(src="images/dishes/10.jpg")
-        h3 Фудзи
+        h3 #{ten}

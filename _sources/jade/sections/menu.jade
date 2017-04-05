@@ -1,34 +1,63 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var about = 'О ресторане'
+    - var interior = 'Интерьер'
+    - var menu = 'Меню'
+    - var stock = 'Акции'
+    - var review = 'Отзывы'
+    - var contact = 'Контакты'
+    - var all_rest = 'Все рестораны'
+  when 'eng'
+    - var about = 'About us'
+    - var interior = 'Interior'
+    - var menu = 'Menu'
+    - var stock = 'Specials'
+    - var review = 'Comments'
+    - var contact = 'Contacts'
+    - var all_rest = 'Все рестораны'
+  when 'kz'
+    - var about = 'Біз туралы'
+    - var interior = 'Интерьер'
+    - var menu = 'Мәзір'
+    - var stock = 'Акциялар'
+    - var review = 'Пікірлер'
+    - var contact = 'Байланыс'
+    - var all_rest = 'Все рестораны'
+
 section#menu
   .container
     nav.mobile_menu
       .wrap
-        a(href="#about").anchor О нас
-        a(href="#interior").anchor Интерьер
-        a(href="#menu").anchor Меню
-        a(href="#stock").anchor Акции
-        a(href="#review").anchor Отзывы
-        a(href="#contact").anchor Контакты
-        a(href="http://satgroup.kz") Все рестораны
+        a(href="#about").anchor #{about}
+        a(href="#interior").anchor #{interior}
+        a(href="#menu").anchor #{menu}
+        a(href="#stock").anchor #{stock}
+        a(href="#review").anchor #{review}
+        a(href="#contact").anchor #{contact}
+        a(href="http://satgroup.kz") #{all_rest}
     .social
       a(href="https://www.instagram.com/satgrouprest/" target="_blank"): img(src="images/inst.png").insta
       a(href="https://www.facebook.com/SAT-GROUP-Rest-1823563401189352/?hc_ref=SEARCH&fref=nf" target="_blank"): img(src="images/facebook.png").facebook
-      a(href="mailto:info.satgroup.kz"): img(src="images/mail.png").mail
+      a(href="#").feed_open_fc: img(src="images/mail.png").mail
     .lang
       a(href="#") RU
       a(href="#") EN
       a(href="#") KZ
     nav.left
-      a(href="#about").anchor О нас
-      a(href="#interior").anchor Интерьер
-      a(href="#menu").anchor Меню
+      a(href="#about").anchor #{about}
+      a(href="#interior").anchor #{interior}
+      a(href="#menu").anchor #{menu}
     nav.right
-      a(href="#stock").anchor Акции
-      a(href="#review").anchor Отзывы
-      a(href="#contact").anchor Контакты
+      a(href="#stock").anchor #{stock}
+      a(href="#review").anchor #{review}
+      a(href="#contact").anchor #{contact}
     a(href="#top")
       picture.logo
-        source(srcset="images/logo_desktop.jpg" media="(min-width: 970px)")
-        source(srcset="images/logo_tablet.jpg" media="(min-width: 750px)")
-        source(srcset="images/logo_mobile.jpg" media="(min-width: 1px)")
+        source(srcset="images/logo_desktop.png" media="(min-width: 970px)")
+        source(srcset="images/logo_mobile.png" media="(min-width: 1px)")
         img(src="images/logo_desktop")
     img(src="images/buter.png").burger
+    .num
+      img(src="images/phone_ico.png").icon
+      span +7 (701) 070707 2

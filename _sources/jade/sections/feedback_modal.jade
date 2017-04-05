@@ -1,0 +1,11 @@
+section#modal_feedback.close_modal_feed
+  .wrap
+    .modal_feed
+      img(src="images/close.png").closer
+      form#modal_form_feedback
+        h2 Написать нам
+        .line
+        input(type="text" id="form_name" name="form_name" required placeholder="Ваше имя")
+        input(type="text" id="form_mail" name="form_mail" required placeholder="EMail")
+        textarea(id="form_message" name="form_message" placeholder="Сообщение" required)
+        input(id="form_submit" type="submit" value="Отправить")

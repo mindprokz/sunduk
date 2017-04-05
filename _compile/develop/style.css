@@ -49,7 +49,8 @@ table {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8); }
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 100; }
   #mail .message {
     position: absolute;
     top: 50%;
@@ -78,9 +79,11 @@ table {
 * {
   box-sizing: border-box; }
 
-@media (max-width: 480px) {
-  body {
-    width: 480px; } }
+body {
+  font-family: 'Philosopher', sans-serif; }
+  @media (max-width: 480px) {
+    body {
+      width: 480px; } }
 
 .container-float {
   max-width: 100%;
@@ -104,7 +107,7 @@ table {
   padding: 0 !important; }
 
 #menu {
-  background: #f7f3ef;
+  background: url("images/logo_back.jpg") no-repeat;
   height: 90px;
   position: absolute;
   top: 0;
@@ -127,6 +130,11 @@ table {
     top: 0;
     left: 50%;
     transform: translateX(-50%); }
+    #menu .logo img {
+      width: 193px; }
+      @media (min-width: 970px) {
+        #menu .logo img {
+          width: 100%; } }
   #menu nav:not(.mobile_menu) {
     display: none; }
     @media (min-width: 750px) {
@@ -134,17 +142,18 @@ table {
         width: 250px;
         display: block; }
         #menu nav:not(.mobile_menu) a {
-          font-size: 14px; } }
-    @media (min-width: 970px) {
+          font-size: 12px; } }
+    @media (min-width: 992px) {
       #menu nav:not(.mobile_menu) {
         width: 310px; }
         #menu nav:not(.mobile_menu) a {
-          font-size: 18px; } }
+          font-size: 15px; } }
     @media (min-width: 1170px) {
       #menu nav:not(.mobile_menu) {
-        width: 430px; } }
+        width: 430px; }
+        #menu nav:not(.mobile_menu) a {
+          font-size: 18px; } }
     #menu nav:not(.mobile_menu) a {
-      font-family: 'Philosopher', sans-serif;
       display: inline-block;
       width: 33.3333%;
       text-align: center;
@@ -154,16 +163,18 @@ table {
       color: #1d1d1d; }
   #menu nav.left {
     position: absolute;
-    top: 55px; }
+    top: 55px;
+    font-weight: 700; }
   #menu nav.right {
     position: absolute;
     top: 55px;
-    right: 0; }
+    right: 0;
+    font-weight: 700; }
   #menu .lang {
     position: absolute;
     top: 6px;
-    font-family: 'Philosopher', sans-serif;
-    right: 100px; }
+    right: 100px;
+    font-weight: 700; }
     #menu .lang a {
       padding-left: 10px;
       padding-right: 10px;
@@ -178,27 +189,32 @@ table {
         #menu .lang a {
           display: inline;
           padding-bottom: 0; } }
-    @media (min-width: 970px) {
+    @media (min-width: 992px) {
       #menu .lang {
-        right: 200px; } }
+        right: 173px; } }
     @media (min-width: 1170px) {
       #menu .lang {
-        right: 295px; } }
+        right: 279px; } }
   #menu .social {
     position: absolute;
     top: 33px;
     left: 40px; }
     @media (min-width: 750px) {
       #menu .social {
-        top: 14px;
-        left: 25px; } }
-    @media (min-width: 970px) {
-      #menu .social {
         left: unset;
+        top: 14px;
+        right: 0; } }
+    @media (min-width: 992px) {
+      #menu .social {
         right: 15px; } }
     #menu .social a {
       padding-left: 5px;
       padding-right: 5px; }
+    #menu .social .mail {
+      display: none; }
+      @media (min-width: 970px) {
+        #menu .social .mail {
+          display: inline; } }
   #menu .burger {
     display: none;
     position: absolute;
@@ -234,13 +250,38 @@ table {
     @media (max-width: 750px) {
       #menu .mobile_menu.open {
         display: table; } }
+  #menu .num {
+    display: none;
+    position: absolute;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    left: 26px;
+    border: 2px solid #f3b118;
+    border-top: none;
+    font-weight: 700;
+    font-size: 17px;
+    color: #1d1d1d; }
+    #menu .num img {
+      vertical-align: middle;
+      margin-right: 15px; }
+    @media (min-width: 750px) {
+      #menu .num {
+        display: block; } }
+    @media (min-width: 992px) {
+      #menu .num {
+        left: 83px; } }
+    @media (min-width: 1170px) {
+      #menu .num {
+        left: 188px; } }
 
 #fix_menu {
+  background: url("images/logo_back.jpg") no-repeat;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
   z-index: 5;
   height: 90px;
@@ -255,16 +296,15 @@ table {
     position: relative; }
   #fix_menu .logo {
     position: absolute;
-    top: 5px;
     left: 15px; }
   #fix_menu nav {
     position: absolute;
     top: 50px;
-    left: 130px; }
+    left: 130px;
+    font-weight: 700; }
     #fix_menu nav a {
-      font-family: 'Philosopher', sans-serif;
       color: #1d1d1d;
-      font-size: 18px;
+      font-size: 15px;
       text-transform: uppercase;
       text-decoration: none;
       padding-left: 16px;
@@ -272,12 +312,13 @@ table {
       @media (min-width: 970px) {
         #fix_menu nav a {
           padding-right: 33px;
-          padding-left: 33px; } }
+          padding-left: 33px;
+          font-size: 16px; } }
   #fix_menu .lang {
     position: absolute;
     top: 15px;
-    font-family: 'Philosopher', sans-serif;
-    right: 15px; }
+    right: 15px;
+    font-weight: 700; }
     #fix_menu .lang a {
       padding-left: 10px;
       padding-right: 10px;
@@ -295,6 +336,21 @@ table {
       #fix_menu .social {
         top: 50px;
         right: 15px; } }
+  #fix_menu .num {
+    position: absolute;
+    top: 0;
+    left: 162px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: 700;
+    border: 2px solid #f3b118;
+    border-top: none;
+    color: #1d1d1d; }
+    #fix_menu .num img {
+      vertical-align: middle;
+      margin-right: 15px; }
   @media (max-width: 750px) {
     #fix_menu {
       display: none; } }
@@ -305,7 +361,8 @@ table {
     position: relative;
     width: 100%; }
     #main picture img {
-      width: 100%; }
+      width: 100%;
+      vertical-align: text-bottom; }
   #main .bottom_link {
     position: absolute;
     bottom: 185px;
@@ -319,27 +376,20 @@ table {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 50px;
-  background: #ececec; }
+  background: url("images/about_texture.jpg") no-repeat center center;
+  background-size: cover;
+  position: relative;
+  overflow-x: hidden; }
   @media (min-width: 970px) {
     #about {
       padding-top: 70px;
-      padding-bottom: 90px; } }
-  #about .shape {
-    margin-bottom: 35px; }
-    @media (min-width: 750px) {
-      #about .shape {
-        margin-bottom: 60px; } }
+      padding-bottom: 200px; } }
   #about h3 {
-    margin-bottom: 55px;
+    margin-bottom: 25px;
     text-transform: uppercase;
-    color: #5c2800;
-    font-family: 'PT Serif', serif;
-    font-size: 35px; }
-    @media (min-width: 970px) {
-      #about h3 {
-        margin-bottom: 100px; } }
+    color: #2b2b2b;
+    font-size: 25px; }
   #about p {
-    font-family: Arial;
     color: #2b2b2b;
     font-size: 17px;
     width: 100%;
@@ -350,17 +400,24 @@ table {
     box-sizing: border-box; }
     @media (min-width: 750px) {
       #about p {
-        width: 585px;
+        width: 470px;
         padding-left: 0;
         padding-right: 0;
         font-size: 18px; } }
   #about .video_link {
     color: #5c2800;
-    font-family: 'PT Serif', serif;
     border-bottom: 1px solid;
     text-transform: uppercase;
+    text-decoration: none;
     cursor: pointer;
     font-weight: 700; }
+  #about .fruits {
+    position: absolute;
+    bottom: 50px;
+    left: 0; }
+    @media (max-width: 970px) {
+      #about .fruits {
+        display: none; } }
 
 #interior {
   width: 100%;
@@ -371,12 +428,14 @@ table {
     #interior {
       padding-bottom: 0;
       background: none; } }
+  #interior .slick-dotted {
+    margin-bottom: 0 !important; }
   #interior .slick-prev {
-    left: 0;
+    left: 50px;
     z-index: 2;
     width: 56px;
     height: 62px;
-    background: url("images/left_arr_interior.png") no-repeat center center;
+    background: url("images/left_arr_menu.png") no-repeat center center;
     opacity: 0.8;
     transition: opacity 0.3s ease; }
     #interior .slick-prev:hover {
@@ -384,10 +443,10 @@ table {
     #interior .slick-prev::before {
       content: ''; }
   #interior .slick-next {
-    right: 0;
+    right: 50px;
     width: 56px;
     height: 62px;
-    background: url("images/right_arr_interior.png") no-repeat center center;
+    background: url("images/right_arr_menu.png") no-repeat center center;
     opacity: 0.8;
     transition: opacity 0.3s ease; }
     #interior .slick-next:hover {
@@ -411,7 +470,7 @@ table {
           content: '';
           width: 22px;
           height: 22px;
-          background: white;
+          background: #5dfff3;
           border-radius: 50%;
           opacity: 1; }
       #interior .slick-dots li button {
@@ -430,17 +489,19 @@ table {
       width: 100%; }
 
 #menu_rest {
-  background: #f9f9f9;
+  background: url("images/menu_texture.jpg") no-repeat center center;
   text-align: center;
   padding-top: 50px;
   padding-bottom: 140px;
   padding-left: 15px;
   padding-right: 15px;
   box-sizing: border-box; }
+  @media (min-width: 970px) {
+    #menu_rest .container {
+      width: 800px; } }
   #menu_rest h2 {
     text-transform: uppercase;
     color: #5c2800;
-    font-family: 'PT Serif', serif;
     padding-bottom: 60px;
     font-size: 35px; }
   #menu_rest .sl_menu .slide {
@@ -456,11 +517,10 @@ table {
       text-transform: uppercase;
       width: 100%;
       position: absolute;
-      font-family: 'PT Serif', serif;
-      color: #5c2800;
+      color: #2d2d2d;
       font-size: 20px;
       bottom: 0;
-      background: rgba(255, 255, 255, 0.5); }
+      background: rgba(240, 176, 17, 0.9); }
   #menu_rest .slick-prev {
     left: 0;
     z-index: 2;
@@ -501,7 +561,7 @@ table {
           content: '';
           width: 22px;
           height: 22px;
-          background: #6d2400;
+          background: #5dfff3;
           border-radius: 50%;
           opacity: 1; }
       #menu_rest .slick-dots li button {
@@ -525,13 +585,11 @@ table {
   #stocks h2 {
     color: #fff;
     text-transform: uppercase;
-    font-family: 'PT Serif', serif;
     font-size: 40px;
     text-align: center;
     padding-bottom: 115px; }
   #stocks .sl_stocks .slide {
-    text-align: center;
-    font-family: 'PT Serif', serif; }
+    text-align: center; }
     #stocks .sl_stocks .slide h3 {
       color: #fff;
       font-size: 33px;
@@ -612,7 +670,7 @@ table {
           opacity: 1; }
 
 #review {
-  background: #fff;
+  background: url("images/review_texture.jpg");
   padding-top: 50px;
   padding-bottom: 46px;
   text-align: center; }
@@ -633,8 +691,9 @@ table {
       font-weight: 700; }
     #review h3 a {
       color: #5c2800;
-      font-family: 'Philosopher', sans-serif;
       font-style: italic; }
+    #review h3.review_trap {
+      font-size: 20px; }
   #review ul {
     padding-left: 15px;
     padding-right: 15px;
@@ -648,10 +707,10 @@ table {
           width: 50%;
           text-align: left;
           float: left;
-          height: 195px; } }
-      @media (min-width: 865px) {
+          height: 220px; } }
+      @media (min-width: 1170px) {
         #review ul li {
-          height: 140px; } }
+          height: 165px; } }
       #review ul li h4 {
         color: #5c2800;
         font-size: 20px;
@@ -660,7 +719,6 @@ table {
         #review ul li h4 span {
           border-bottom: 2px solid; }
       #review ul li p {
-        font-family: 'Philosopher', sans-serif;
         font-size: 17px;
         line-height: 25px;
         font-style: italic;
@@ -681,72 +739,140 @@ table {
       height: 700px; } }
 
 #footer {
-  background: #ececec;
-  padding: 30px 15px; }
-  @media (min-width: 750px) {
-    #footer {
-      padding: 65px 15px 75px; } }
+  background: url("images/footer_texture.jpg");
+  padding: 30px 0;
+  color: #fff; }
+  #footer .icon {
+    float: left;
+    margin-right: 25px; }
   #footer .text {
-    text-align: center;
-    font-family: Arial;
-    font-size: 15px;
-    color: #3a3a3a;
-    line-height: 25px;
-    padding-bottom: 40px; }
-    @media (min-width: 750px) {
-      #footer .text {
-        text-align: left;
-        padding-right: 20px;
-        box-sizing: border-box;
-        float: left;
-        width: 40%;
-        padding-bottom: 0; } }
+    float: left;
+    width: 250px; }
     @media (min-width: 970px) {
       #footer .text {
-        font-size: 17px; } }
-  #footer .adress {
-    float: left;
-    width: 50%;
-    font-family: Arial;
-    color: #3a3a3a;
-    font-size: 18px;
-    padding-right: 10px;
-    box-sizing: border-box; }
-    #footer .adress p {
-      padding-bottom: 10px; }
-    #footer .adress a {
-      color: #5c2800; }
-    @media (min-width: 750px) {
-      #footer .adress {
-        font-size: 17px;
-        width: 25%; } }
-    @media (min-width: 970px) {
-      #footer .adress {
-        font-size: 20px; } }
-  #footer .numbers {
-    float: left;
-    width: 50%; }
-    @media (min-width: 750px) {
-      #footer .numbers {
-        width: 35%; } }
-    #footer .numbers .num {
+        width: 345px; } }
+    #footer .text h4 {
+      font-weight: 700;
       font-size: 20px;
-      color: #969696;
-      padding-bottom: 10px;
-      font-family: Arial; }
-      #footer .numbers .num b {
-        font-weight: 700;
-        color: #3a3a3a; }
-    #footer .numbers .work {
-      color: #3a3a3a;
-      font-family: Arial; }
+      padding-bottom: 15px; }
+    #footer .text p {
+      font-size: 19px;
+      padding-bottom: 10px; }
+    #footer .text .num {
+      font-size: 20px;
+      padding-bottom: 10px; }
+    #footer .text .mail {
+      color: #fff;
+      font-size: 19px;
+      text-decoration: underline; }
+  #footer .adress {
+    margin-bottom: 50px;
+    margin-left: 20%; }
+    @media (min-width: 750px) {
+      #footer .adress {
+        float: left;
+        width: 50%;
+        margin-bottom: 0;
+        margin-left: 0; } }
+    #footer .adress::after {
+      content: ' ';
+      clear: both;
+      display: table; }
+  #footer .contact {
+    margin-bottom: 50px;
+    margin-left: 20%; }
+    @media (min-width: 750px) {
+      #footer .contact {
+        float: left;
+        width: 50%;
+        margin-bottom: 0;
+        margin-left: 0; }
+        #footer .contact .wrap {
+          float: right; } }
+    #footer .contact::after {
+      content: ' ';
+      clear: both;
+      display: table; }
+  #footer h5 {
+    margin-top: 25px;
+    text-align: center; }
+    @media (min-width: 750px) {
+      #footer h5 {
+        text-align: left; } }
 
 .all_rest {
   position: fixed;
-  top: 50vh;
-  right: 0;
+  bottom: 50px;
+  right: 50px;
   transform: translateY(-50%);
   display: none; }
   @media (min-width: 750px) {
     .all_rest {
       display: block; } }
+
+#modal_feedback {
+  background: rgba(0, 0, 0, 0.6);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 50;
+  overflow: hidden; }
+  #modal_feedback.close_modal_feed {
+    display: none; }
+  #modal_feedback .wrap {
+    position: absolute;
+    width: 380px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+
+#modal_feedback .modal_feed {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 20px; }
+  #modal_feedback .modal_feed img {
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    cursor: pointer; }
+  #modal_feedback .modal_feed h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 28px;
+    padding-bottom: 18px; }
+  #modal_feedback .modal_feed .line {
+    margin: auto;
+    background: #279f9e;
+    height: 2px;
+    width: 100px; }
+  #modal_feedback .modal_feed input[type="text"],
+  #modal_feedback .modal_feed textarea {
+    width: 80%;
+    display: block;
+    margin: 20px auto 0;
+    border: 1px solid #a6a6a6;
+    padding: 10px 17px;
+    font-family: 'Philosopher', sans-serif; }
+    #modal_feedback .modal_feed input[type="text"]:active, #modal_feedback .modal_feed input[type="text"]:focus,
+    #modal_feedback .modal_feed textarea:active,
+    #modal_feedback .modal_feed textarea:focus {
+      outline: 0; }
+  #modal_feedback .modal_feed textarea {
+    resize: none;
+    min-height: 150px;
+    font-family: 'Philosopher', sans-serif; }
+  #modal_feedback .modal_feed input[type="submit"] {
+    margin-left: 10%;
+    display: block;
+    margin-top: 20px;
+    text-transform: uppercase;
+    color: #fff;
+    background: #279f9e;
+    width: 150px;
+    height: 40px;
+    font-family: 'Philosopher', sans-serif;
+    border: none; }

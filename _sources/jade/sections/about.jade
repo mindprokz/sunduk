@@ -1,7 +1,24 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var header = 'О ресторане'
+    - var text = ' - истинно восточный ресторан <br> в лучших традициях гостеприимства.'
+    - var text_2 = 'Добро пожаловать в сказку с чарующей живой музыкой, ароматными угощениями и пьянящим теплом Востока!'
+    - var button = 'Посмотреть видео'
+  when 'eng'
+    - var header = 'About'
+    - var text = 'Delicacy and harmonic sophistication – the best words to describe the restaurant «KikuMatsuri» modern design and lean Japanese minimalism create the unique interior.'
+    - var button = 'Video'
+  when 'kz'
+    - var header = 'Мейрамхана туралы'
+    - var text = '«Kiku Matsuri»мейрамханасының сипаттамасына ізеттілік, талғампаздық сөздері әбден лайық, заманауи дизайн мен жапон минимализмі интерьерге көрік береді'
+    - var button = 'Бейне қарау'
+
 section#about
   a(name="about")
   .container
-    img(src="images/log.png").shape
-    h3 О ресторане
-    p Изысканность и гармоничная утонченность – слова, как нельзя лучше подходящие для описания ресторана «Kiku Matsuri». Современный дизайн и сдержанный японский минимализм создают уникальность интерьера.
-    a(href="https://www.youtube.com/embed/woVUvj8WeLA?autoplay=1" class="fancybox fancybox.iframe").video_link Посмотреть видео
+    h3 Sunduk
+    p !{text}
+    p #{text_2}
+    a(href="https://www.youtube.com/embed/woVUvj8WeLA?autoplay=1" class="fancybox fancybox.iframe").video_link #{button}
+  img(src="images/fruits.png").fruits

@@ -17,6 +17,8 @@ $container-float: 100%;
 }
 
 body {
+  font-family: 'Philosopher', sans-serif;
+
   @media (max-width: 480px) {
     width: 480px;
   }
@@ -27,7 +29,7 @@ body {
 }
 
 .container {
-  @include container($container);
+  @include container($container center);
 }
 
 .fancybox-skin {
@@ -44,4 +46,5 @@ body {
   'sections/stocks',
   'sections/review',
   'sections/map',
-  'sections/footer';
+  'sections/footer',
+  'sections/feedback_modal';

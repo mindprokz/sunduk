@@ -1,4 +1,5 @@
-import FloatMenu from './floatMenu.js';
+import FloatMenu from './floatMenu';
+import modal_feed from './modal_feed';
 
 new FloatMenu().mobileClicker(
   document.querySelector('.burger'),
@@ -10,19 +11,25 @@ new FloatMenu().init(document.querySelector('#fix_menu'));
 $('.sl').slick({
   dots: true,
   infinite: true,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  autoplay: true,
+  pauseOnHover: false
 });
 
 $('.sl_menu').slick({
   dots: true,
   infinite: true,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  autoplay: true,
+  pauseOnHover: false
 });
 
 $('.sl_stocks').slick({
   dots: true,
   infinite: true,
-  adaptiveHeight: true
+  adaptiveHeight: true,
+  autoplay: true,
+  pauseOnHover: false
 });
 
 ymaps.ready(init);
@@ -31,13 +38,13 @@ var myMap,
 
 function init(){
   myMap = new ymaps.Map("map", {
-    center: [51.129067, 71.406420],
+    center: [51.114151, 71.418066],
     zoom: 17
   });
 
   myMap.behaviors.disable(['drag','scrollZoom']);
 
-  myPlacemark = new ymaps.Placemark([51.129067, 71.406420], {
+  myPlacemark = new ymaps.Placemark([51.114151, 71.418066], {
     hintContent: 'Москва!',
     balloonContent: 'Столица России'
   });
@@ -57,3 +64,5 @@ $(document).on('click', 'a.anchor', function () {
   $('html, body').animate({ scrollTop:  $('a[name="'+this.hash.slice(1)+'"]').offset().top - 152 }, 1000 );
   return false;
 });
+
+modal_feed();

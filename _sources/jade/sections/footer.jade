@@ -1,13 +1,33 @@
+// lang vars
+case process.env.NODE_ENV
+  when 'ru'
+    - var header_adr = 'Адрес'
+    - var header_text = 'Астана, Керей,<wbr> Жанибек хандар, 14/2'
+    - var worktime = 'РЕЖИМ РАБОТЫ: с 12:00 до 01:00'
+    - var head_cont = 'Контакты'
+  when 'eng'
+    - var header_adr = 'About'
+  when 'kz'
+    - var header_adr = 'Мейрамхана туралы'
+
 section#footer
   .container
-    p.text Мы искренне будем рады видеть Вас и надеемся, что каждое посещение нашего ресторана будет для Вас новым наслаждением и изысканным ритуалом.
-    .adress
-      p!="Астана, пр. Туран, 30<br> здание Fitness Palace"
-      a(href="#").mail kikumatsuri@mail.ru
-    .numbers
-      .num!="+7 (7172) <b>56-77-33</b>"
-      .num!="+7 775 <b>793-17-06</b>"
-      .work РЕЖИМ РАБОТЫ: ежедневно с 12:00 до 01:00
+    .row
+      .adress
+        img(src="images/geo.png").icon
+        .text
+          h4 #{header_adr}
+          p !{header_text}
+          .work !{worktime}
+      .contact
+        .wrap
+          img(src="images/phone.png").icon
+          .text
+            h4 #{head_cont}
+            .num +7 (701) 070707 2
+            .num +7 (7212) 222-444
+            a(href="#").mail sunduk@mail.ru
+    h5 Sunduk — 2017
 a(href="http://satgroup.kz" target="_blank"): img(src="images/rest_but.png").all_rest
 
 script(src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript")

@@ -3,10 +3,10 @@ export default class sendForm {
     document.getElementById(id).addEventListener('submit', () => {
 
       let data = {
-      	name: document.querySelector(dates.name.value),
-      	email: document.querySelector(dates.email.value),
-      	telephone: document.querySelector(dates.telephone.value)
-      }	
+      	name: document.querySelector(dates.name).value,
+      	email: document.querySelector(dates.email).value,
+      	telephone: document.querySelector(dates.telephone).value
+      }
 
       $("#application").submit( () => {
         $.ajax({
@@ -23,11 +23,11 @@ export default class sendForm {
             $(`#${id}`).trigger("reset");
             mail.classList.add('not_visible_mail');
           }, 1000);
-          
+
         });
 
         return false;
-      });  
+      });
 
     });
   }
