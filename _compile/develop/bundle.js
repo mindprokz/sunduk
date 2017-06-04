@@ -42,7 +42,7 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -65,6 +65,7 @@
 	  infinite: true,
 	  adaptiveHeight: true,
 	  autoplay: true,
+	  fade: true,
 	  pauseOnHover: false
 	});
 
@@ -89,15 +90,15 @@
 
 	function init() {
 	  myMap = new ymaps.Map("map", {
-	    center: [51.114151, 71.418066],
+	    center: [51.114812, 71.418323],
 	    zoom: 17
 	  });
 
 	  myMap.behaviors.disable(['drag', 'scrollZoom']);
 
-	  myPlacemark = new ymaps.Placemark([51.114151, 71.418066], {
-	    hintContent: 'Москва!',
-	    balloonContent: 'Столица России'
+	  myPlacemark = new ymaps.Placemark([51.114812, 71.418323], {
+	    hintContent: 'Наш ресторан',
+	    balloonContent: 'Sunduk'
 	  });
 
 	  myMap.geoObjects.add(myPlacemark);
@@ -118,9 +119,9 @@
 
 	(0, _modal_feed2.default)();
 
-/***/ },
+/***/ }),
 /* 1 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -177,9 +178,9 @@
 
 	exports.default = FloatMenu;
 
-/***/ },
+/***/ }),
 /* 2 */
-/***/ function(module, exports) {
+/***/ (function(module, exports) {
 
 	'use strict';
 
@@ -240,5 +241,5 @@
 	  });
 	}
 
-/***/ }
+/***/ })
 /******/ ]);
